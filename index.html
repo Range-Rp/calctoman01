@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculadora de Produção - Pistola / Sub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="site-header">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="title">
+        <h1>Calculadora de Produção</h1>
+        <p>Converte matérias-primas e calcula requisitos para pistolas e subs.</p>
+      </div>
+      <img id="photo" src="photo.png" alt="Foto" />
+    </header>
+
+    <section class="panel">
+      <h2>1) A partir do inventário</h2>
+      <div class="grid">
+        <label>Latas: <input id="in-latas" type="number" min="0" value="0"></label>
+        <label>Reciclável: <input id="in-recic" type="number" min="0" value="0"></label>
+        <label>Pilhas: <input id="in-pilhas" type="number" min="0" value="0"></label>
+      </div>
+      <div class="row">
+        <button id="btn-calc-inv">Calcular produção possível</button>
+      </div>
+      <pre id="out-inv" class="out"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>2) Requisitos para fabricar (direto)</h2>
+      <div class="grid">
+        <label>Pistolas: <input id="in-pistolas" type="number" min="0" value="0"></label>
+        <label>Subs: <input id="in-subs" type="number" min="0" value="0"></label>
+      </div>
+      <div class="row">
+        <button id="btn-require">Calcular matérias-primas necessárias</button>
+        <button id="btn-per-unit">Mostrar por unidade</button>
+      </div>
+      <pre id="out-req" class="out"></pre>
+    </section>
+
+    <footer>
+      <small>Regras: 1 lata→3 alum., 20 recicl.→1 chapa, 1 pilha→2 cobre; 50 alum→1 aço; 55 cobre→1 mola.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
